@@ -1,0 +1,7 @@
+.shopping-items-array {
+}
+
+.shopping-item {
+	display: flex;
+	flex-direction: column;
+}
