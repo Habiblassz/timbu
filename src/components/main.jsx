@@ -13,7 +13,7 @@ class Main extends Component {
 							Get access to the best <br /> healthcare products <br />
 							with just a few clicks
 						</h2>
-						<button className="btn btn-primary btn-lg">Shop now</button>
+						<button className="btn btn-secondary btn-lg">Shop now</button>
 					</div>
 
 					<div className="right">
