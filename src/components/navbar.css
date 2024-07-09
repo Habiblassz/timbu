@@ -3,9 +3,7 @@
 	grid-template-columns: repeat(7, 1fr);
 	grid-template-rows: 80px;
 	align-items: center;
-	height: 80px;
 	padding: 0 1rem;
-	/* width: 100%; */
 }
 
 .navbar-logo {
@@ -26,6 +24,7 @@
 	outline: none;
 	padding-left: 0.7rem;
 	border-radius: 5px;
+	border: 0.1px solid var(--gray-color);
 }
 
 .navbar-icons {

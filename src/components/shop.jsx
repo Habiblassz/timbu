@@ -69,6 +69,9 @@ function Bandage(props) {
 				<Stars />
 				<Stars />
 				<Stars />
+				{[0, 1, 2, 3, 4].map((star) => (
+					<Stars />
+				))}
 			</div>
 			<p>{props.paragraph}</p>
 			<span>{props.number}</span>
