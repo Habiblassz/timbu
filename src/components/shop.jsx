@@ -9,12 +9,16 @@ import adhesive from "../images/Image (6).png";
 import elastic from "../images/Image (7).png";
 import transparent from "../images/Image (8).png";
 import compression from "../images/Image (9).png";
+import "./shop.css";
 
 class Shop extends Component {
 	state = {};
 	render() {
 		return (
 			<div className="gallery">
+				<div className="heading-text">
+					<span>Shop with Categories</span>
+				</div>
 				<div className="shopping-item-array">
 					<Item image={bandage} span="bandages" />
 					<Item image={alcohol} span="Alcohol wipes" />
@@ -22,6 +26,25 @@ class Shop extends Component {
 					<Item image={sterile} span="Sterile strips" />
 					<Item image={medical} span="Medical Scissors" />
 					<Item image={burns} span="Burns Cream" />
+				</div>
+				<div className="bandage-links">
+					<div>
+						<a href="#">Browse All Products </a>
+					</div>
+					<ul>
+						<li>
+							<a href="#">All Products</a>
+						</li>
+						<li>
+							<a href="#">Adesive Bandages</a>
+						</li>
+						<li>
+							<a href="#">Gauze Bandages</a>
+						</li>
+						<li>
+							<a href="#">Elastic Bandages</a>
+						</li>
+					</ul>
 				</div>
 				<div className="bandages">
 					<Bandage
@@ -45,6 +68,9 @@ class Shop extends Component {
 						number="#5000"
 					/>
 				</div>
+				<div className="view-all">
+					<a href="#">View All</a>
+				</div>
 			</div>
 		);
 	}
@@ -61,7 +87,7 @@ function Item(props) {
 
 function Bandage(props) {
 	return (
-		<>
+		<div className="bandage-tray">
 			<img src={props.img} alt="" />
 			<div className="stars">
 				<Stars />
@@ -69,13 +95,10 @@ function Bandage(props) {
 				<Stars />
 				<Stars />
 				<Stars />
-				{[0, 1, 2, 3, 4].map((star) => (
-					<Stars />
-				))}
 			</div>
 			<p>{props.paragraph}</p>
 			<span>{props.number}</span>
-		</>
+		</div>
 	);
 }
 

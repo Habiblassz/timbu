@@ -1,0 +1,76 @@
+.wrapper .top {
+	background-color: var(--light-blue);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 72px 0;
+	color: #fff;
+}
+
+.wrapper .top h3 {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.wrapper .top p {
+	font-size: 0.7rem;
+	font-weight: 400;
+}
+
+.wrapper .subscribe {
+	position: relative;
+	height: 50px;
+}
+.wrapper .subscribe input {
+	width: 600px;
+	height: 100%;
+	border: none;
+	padding: 1rem 20rem 1rem 1rem;
+	outline: none;
+}
+
+.wrapper .subscribe button {
+	padding: 0.5rem 2rem;
+	position: absolute;
+	transform: translate(-165px, 10%);
+	background-color: var(--deep-blue);
+	border-radius: 0;
+}
+
+.wrapper .bottom {
+	background-color: var(--gray-color);
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	color: #fff;
+	padding: 5rem 4.5rem;
+}
+
+.wrapper .bottom .left .logo-name {
+	font-weight: 700;
+	font-size: 2rem;
+}
+
+.wrapper .bottom .left .navbar-logo {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.wrapper .bottom .center {
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper .bottom .center .links {
+	display: flex;
+}
+
+.wrapper .bottom .right .download-card {
+	background-color: var(--dark-color);
+	display: flex;
+	padding: 1rem;
+	gap: 9px;
+	margin-top: 1rem;
+}

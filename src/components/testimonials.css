@@ -1,0 +1,40 @@
+.testimonial-tray {
+	background-color: var(--light-gray);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	font-family: "Noto sans" sans-serif;
+	color: #fff;
+	padding-top: 2rem;
+	padding-bottom: 6rem;
+}
+
+.testimonial-heading {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.testimonial-cards {
+	display: flex;
+	justify-content: space-between;
+	gap: 8.7rem;
+	align-items: center;
+}
+.testimonial {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.testimonial h3 {
+	font-size: 22px;
+	align-self: flex-start;
+	margin-bottom: 2rem;
+}
+
+.testimonial p {
+	font-size: 18px;
+}
