@@ -18,9 +18,10 @@
 
 .testimonial-cards {
 	display: flex;
-	justify-content: space-between;
-	gap: 8.7rem;
+	justify-content: center;
+	gap: 3rem;
 	align-items: center;
+	flex-wrap: wrap;
 }
 .testimonial {
 	display: flex;
@@ -32,9 +33,15 @@
 .testimonial h3 {
 	font-size: 22px;
 	align-self: flex-start;
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 }
 
 .testimonial p {
 	font-size: 18px;
+}
+
+@media (max-width: 560px) {
+	.testimonial-cards {
+		flex-direction: column;
+	}
 }

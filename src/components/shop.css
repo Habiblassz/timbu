@@ -15,6 +15,7 @@
 	justify-content: space-evenly;
 	align-items: center;
 	margin-bottom: 4.5rem;
+	flex-wrap: wrap;
 }
 
 .shopping-item {
@@ -65,8 +66,10 @@
 
 .gallery .bandages {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
+	gap: 1rem;
 }
 
 .gallery .bandage-tray {
