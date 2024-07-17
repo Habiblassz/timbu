@@ -12,20 +12,43 @@ import compression from "../images/Image (9).png";
 import "./shop.css";
 
 class Shop extends Component {
-	state = {};
+	state = {
+		image: [
+			[bandage, "Bandages"],
+			[alcohol, "Alcohol wipes"],
+			[sterileCotton, "Sterile cotton buds"],
+			[sterile, "Sterile stripes"],
+			[medical, "Medical scissors"],
+			[burns, "Burns cream"],
+		],
+		bandageImages: [
+			[adhesive, "Adhesive", "#500"],
+			[elastic, "Elastic bandage", "#2000"],
+			[transparent, "Transparent bandage", "#3000"],
+			[compression, "Compresion Bandage", "#5000"],
+		],
+	};
 	render() {
+		// const url =
+		// 	"https://api.timbu.cloud/products?APP_ID=SZ4TF873UKWDWLI&API_KEY=71ca24ca05fb40488f0fb83750de43df20240713102951441458";
+
+		// const request = () => fetch(url);
+		// let FetchImages = async () => {
+		// 	let data = await request();
+		// 	let response = await data.json();
+		// 	console.log(response);
+		// };
+		// FetchImages();
+
 		return (
 			<div className="gallery">
 				<div className="heading-text">
 					<span>Shop with Categories</span>
 				</div>
 				<div className="shopping-item-array">
-					<Item image={bandage} span="bandages" />
-					<Item image={alcohol} span="Alcohol wipes" />
-					<Item image={sterileCotton} span="Sterile cotton balls" />
-					<Item image={sterile} span="Sterile strips" />
-					<Item image={medical} span="Medical Scissors" />
-					<Item image={burns} span="Burns Cream" />
+					{this.state.image.map((item, index) => (
+						<Item key={index} image={item[0]} span={item[1]} />
+					))}
 				</div>
 				<div className="bandage-links">
 					<div>
@@ -47,7 +70,24 @@ class Shop extends Component {
 					</ul>
 				</div>
 				<div className="bandages">
-					<Bandage
+					{this.state.bandageImages.map((item, index) => (
+						<Bandage
+							key={index}
+							img={item[0]}
+							paragraph={item[1]}
+							number={item[2]}
+						/>
+					))}
+					{this.state.bandageImages.map((item, index) => (
+						<Bandage
+							key={index}
+							img={item[0]}
+							paragraph={item[1]}
+							number={item[2]}
+						/>
+					))}
+
+					{/* <Bandage
 						img={adhesive}
 						paragraph="Adhesive Bandages(Plasters)"
 						number="#500"
@@ -66,7 +106,7 @@ class Shop extends Component {
 						img={compression}
 						paragraph="Compression Bandages"
 						number="#5000"
-					/>
+					/> */}
 				</div>
 				<div className="view-all">
 					<a href="#">View All</a>
@@ -90,11 +130,9 @@ function Bandage(props) {
 		<div className="bandage-tray">
 			<img src={props.img} alt="" />
 			<div className="stars">
-				<Stars />
-				<Stars />
-				<Stars />
-				<Stars />
-				<Stars />
+				{[1, 2, 3, 4, 5].map((index) => (
+					<Stars key={index} />
+				))}
 			</div>
 			<p>{props.paragraph}</p>
 			<span>{props.number}</span>
