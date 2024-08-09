@@ -3,6 +3,7 @@ import Main from "./components/main";
 import Shop from "./components/shop";
 import Testimonials from "./components/testimonials";
 import Footer from "./components/footer";
+import DataFunction from "./components/data";
 
 function App() {
 	return (
@@ -12,6 +13,7 @@ function App() {
 			<Shop />
 			<Testimonials />
 			<Footer />
+			{/* <DataFunction /> */}
 		</div>
 	);
 }

@@ -26,6 +26,18 @@ class Shop extends Component {
 			[elastic, "Elastic bandage", "#2000"],
 			[transparent, "Transparent bandage", "#3000"],
 			[compression, "Compresion Bandage", "#5000"],
+			[adhesive, "Adhesive", "#500"],
+			[elastic, "Elastic bandage", "#2000"],
+			[transparent, "Transparent bandage", "#3000"],
+			[compression, "Compresion Bandage", "#5000"],
+			[adhesive, "Adhesive", "#500"],
+			[elastic, "Elastic bandage", "#2000"],
+			[transparent, "Transparent bandage", "#3000"],
+			[compression, "Compresion Bandage", "#5000"],
+			[adhesive, "Adhesive", "#500"],
+			[elastic, "Elastic bandage", "#2000"],
+			[transparent, "Transparent bandage", "#3000"],
+			[compression, "Compresion Bandage", "#5000"],
 		],
 	};
 	render() {
@@ -51,8 +63,33 @@ class Shop extends Component {
 					))}
 				</div>
 				<div className="bandage-links">
-					<div>
-						<a href="#">Browse All Products </a>
+					<div className="browse-all">
+						<a href="#">
+							Browse All Products
+							<span className="arrow">
+								<svg
+									width="20"
+									height="20"
+									viewBox="0 0 22 22"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M3.75 12H20.25"
+										stroke="#1b6392"
+										strokeWidth="1.5"
+										strokeLinecap="round"
+										strokeLinejoin="round"
+									/>
+									<path
+										d="M13.5 5.25L20.25 12L13.5 18.75"
+										stroke="#1b6392"
+										strokeWidth="1.5"
+										strokeLinecap="round"
+										strokeLinejoin="round"
+									/>
+								</svg>
+							</span>
+						</a>
 					</div>
 					<ul>
 						<li>
@@ -70,46 +107,44 @@ class Shop extends Component {
 					</ul>
 				</div>
 				<div className="bandages">
-					{this.state.bandageImages.map((item, index) => (
-						<Bandage
-							key={index}
-							img={item[0]}
-							paragraph={item[1]}
-							number={item[2]}
-						/>
-					))}
-					{this.state.bandageImages.map((item, index) => (
-						<Bandage
-							key={index}
-							img={item[0]}
-							paragraph={item[1]}
-							number={item[2]}
-						/>
-					))}
-
-					{/* <Bandage
-						img={adhesive}
-						paragraph="Adhesive Bandages(Plasters)"
-						number="#500"
-					/>
-					<Bandage
-						img={elastic}
-						paragraph="Elastic Bandages(ACE Wraps)"
-						number="#2000"
-					/>
-					<Bandage
-						img={transparent}
-						paragraph="Transparent Films dressing"
-						number="#3000"
-					/>
-					<Bandage
-						img={compression}
-						paragraph="Compression Bandages"
-						number="#5000"
-					/> */}
+					<div className="bandage-items">
+						{this.state.bandageImages.map((item, index) => (
+							<Bandage
+								key={index}
+								img={item[0]}
+								paragraph={item[1]}
+								number={item[2]}
+							/>
+						))}
+					</div>
 				</div>
 				<div className="view-all">
-					<a href="#">View All</a>
+					<a href="#">
+						View All
+						<span className="arrow">
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 22 22"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M3.75 12H20.25"
+									stroke="#1b6392"
+									strokeWidth="1.5"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								/>
+								<path
+									d="M13.5 5.25L20.25 12L13.5 18.75"
+									stroke="#1b6392"
+									strokeWidth="1.5"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								/>
+							</svg>
+						</span>
+					</a>
 				</div>
 			</div>
 		);

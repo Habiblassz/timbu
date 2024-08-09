@@ -94,6 +94,8 @@
 	box-shadow: 2px 2px 2px 0 #0000000e;
 	padding: 1.2rem 4rem;
 	background-color: var(--deep-blue);
+	color: #fff;
+	font-size: 1.2rem;
 	font-family: "Noto sans" sans-serif;
 	font-weight: 700;
 }

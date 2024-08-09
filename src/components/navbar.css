@@ -5,13 +5,27 @@
 	padding: 0 1rem;
 }
 
+.navbar-search {
+	position: relative;
+}
+
+.navbar-search svg {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0.4rem;
+}
+
 .navbar-search input {
 	width: 453px;
 	height: 35px;
 	outline: none;
 	padding-left: 0.7rem;
 	border-radius: 5px;
-	border: 0.1px solid var(--gray-color);
+	border: 0.1px solid #37474f6a;
+	padding-left: 2rem;
+	padding-right: 1rem;
+	font-size: 1rem;
 }
 
 .navbar-icons {

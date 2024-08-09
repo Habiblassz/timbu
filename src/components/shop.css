@@ -12,17 +12,13 @@
 
 .shopping-item-array {
 	display: flex;
-	/* justify-content: center;
-	align-items: center; */
+	justify-content: center;
+	align-items: center;
 	gap: 1.5rem;
 	margin: 3.5rem auto;
-	overflow-x: scroll;
-	scrollbar-width: 10% !important;
-	-ms-scroll-limit-x-max: 2rem;
-	padding: 0 1rem;
-	max-width: 1000px;
-	padding-bottom: 2rem;
-	/* scroll-snap-type: x proximity; */
+	padding: 0 1rem 2rem 1rem;
+	flex-wrap: wrap;
+	align-content: center;
 }
 
 .shopping-item-array::-webkit-scrollbar,
@@ -51,13 +47,17 @@
 	gap: 1rem;
 	font-weight: 500;
 	font-size: 1rem;
-	min-width: 300px;
+	border: 1px solid #37474f6a;
+	border-radius: 0.3rem;
+	padding: 1.7rem 1rem;
 	/* scroll-snap-align: center; */
 }
 
 .shopping-item img {
-	object-fit: cover;
-	width: 100%;
+	object-fit: contain;
+	aspect-ratio: 4/3;
+	/* mix-blend-mode: color; */
+	/* width: 100%; */
 }
 
 .bandage-links div,
@@ -69,9 +69,27 @@
 	margin-bottom: 2rem;
 }
 
-.bandage-links div a {
+.bandage-links .browse-all a,
+.view-all a {
 	color: var(--light-blue);
 	text-decoration: none;
+}
+
+.bandage-links .browse-all .arrow,
+.view-all .arrow {
+	position: relative;
+}
+
+.bandage-links .browse-all svg,
+.view-all svg {
+	margin-left: 10px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.view-all {
+	margin-top: 2rem;
 }
 
 .bandage-links ul {
@@ -90,13 +108,26 @@
 	color: var(--lightest-gray);
 }
 
+.bandage-links ul li a::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: red;
+}
+
 .gallery .bandages {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	overflow-x: auto;
-	gap: 1rem;
-	padding-bottom: 2rem;
+	max-width: 100vw;
+}
+
+.gallery .bandages .bandage-items {
+	width: 90%;
+	display: flex;
+	gap: 1.5rem;
+	align-items: center;
+	overflow-x: scroll;
 }
 
 .gallery .bandage-tray {

@@ -183,7 +183,7 @@ class Main extends Component {
 					</div>
 					<div className="below-bottom">
 						<h3>To Enjoy a Personalized Service and Experience</h3>
-						<button className="btn btn-primary">Download mobile app</button>
+						<button className="btn">Download Mobile App</button>
 					</div>
 				</div>
 			</div>
