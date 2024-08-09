@@ -3,7 +3,7 @@ import Main from "./components/main";
 import Shop from "./components/shop";
 import Testimonials from "./components/testimonials";
 import Footer from "./components/footer";
-import DataFunction from "./components/data";
+// import DataFunction from "./components/data";
 
 function App() {
 	return (
