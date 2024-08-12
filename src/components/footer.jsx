@@ -7,7 +7,7 @@ class Footer extends Component {
 	render() {
 		return (
 			<div className="wrapper">
-				<div className="top">
+				<div className="top footer-top">
 					<h3>Subscribe to our newsletter</h3>
 					<p>Get the latest updates on restock and new products</p>
 					<div className="subscribe">
@@ -15,8 +15,8 @@ class Footer extends Component {
 						<button className="btn btn-primary">SUBSCRIBE</button>
 					</div>
 				</div>
-				<div className="bottom">
-					<div className="left">
+				<div className="bottom footer-bottom">
+					<div className="footer-bottom-left">
 						<div className="navbar-logo">
 							<div>
 								<img src={frame2} alt="logo-image" />
@@ -41,7 +41,7 @@ class Footer extends Component {
 							</div>
 						</div>
 					</div>
-					<div className="center">
+					<div className="footer-bottom-center">
 						<div className="links">
 							<div className="top-category">
 								<p>TOP CATEGORY</p>
@@ -70,7 +70,7 @@ class Footer extends Component {
 						</div>
 						<span>Shoppu 2024</span>
 					</div>
-					<div className="right">
+					<div className="footer-bottom-right">
 						<p>DOWNLOAD APP</p>
 						<div className="download-cards">
 							<div className="download-card">
@@ -88,8 +88,8 @@ class Footer extends Component {
 									</svg>
 								</div>
 								<div className="text">
-									<p>Get it now</p>
-									<p>Google play</p>
+									<p className="get-now">Get it now</p>
+									<p className="app-store">Google play</p>
 								</div>
 							</div>
 							<div className="download-card">
@@ -119,8 +119,8 @@ class Footer extends Component {
 									</svg>
 								</div>
 								<div className="text">
-									<p>Get it now</p>
-									<p>App store</p>
+									<p className="get-now">Get it now</p>
+									<p className="app-store">App store</p>
 								</div>
 							</div>
 						</div>

@@ -1,4 +1,4 @@
-.wrapper .top {
+.wrapper .footer-top {
 	background-color: var(--light-blue);
 	display: flex;
 	flex-direction: column;
@@ -8,29 +8,29 @@
 	color: #fff;
 }
 
-.wrapper .top h3 {
+.wrapper .footer-top h3 {
 	font-size: 1.5rem;
 	font-weight: 600;
 }
 
-.wrapper .top p {
+.wrapper .footer-top p {
 	font-size: 0.7rem;
 	font-weight: 400;
 }
 
-.wrapper .subscribe {
+.wrapper .footer-top .subscribe {
 	position: relative;
 	height: 50px;
 }
-.wrapper .subscribe input {
+.wrapper .footer-top .subscribe input {
 	width: 600px;
 	height: 100%;
 	border: none;
-	padding: 1rem 20rem 1rem 1rem;
+	padding: 1rem 12.5rem 1rem 1rem;
 	outline: none;
 }
 
-.wrapper .subscribe button {
+.wrapper .footer-top .subscribe button {
 	padding: 0.5rem 2rem;
 	position: absolute;
 	transform: translate(-165px, 10%);
@@ -38,52 +38,67 @@
 	border-radius: 0;
 }
 
-.wrapper .bottom {
+.wrapper .footer-bottom {
 	background-color: var(--gray-color);
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 2rem;
+	/* gap: 2.5rem; */
 	color: #fff;
 	padding: 5rem 4.5rem;
 }
 
-.wrapper .bottom .left .logo-name {
+.wrapper .footer-bottom .footer-bottom-left .logo-name {
 	font-weight: 700;
 	font-size: 2rem;
 }
 
-.wrapper .bottom .left .navbar-logo {
+.wrapper .footer-bottom .footer-bottom-left .navbar-logo {
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
 }
 
-.wrapper .bottom .center {
+.wrapper .footer-bottom .footer-bottom-center {
 	display: flex;
 	flex-direction: column;
 }
 
-.wrapper .bottom .center .links {
+.wrapper .footer-bottom .footer-bottom-center .links {
 	display: flex;
 	gap: 1rem;
 }
 
-.wrapper .bottom .right .download-card {
+.wrapper .footer-bottom .footer-bottom-right .download-card {
 	background-color: var(--dark-color);
 	display: flex;
-	padding: 1rem;
-	gap: 9px;
+	/* align-items: center; */
+	justify-content: space-between;
+	/* padding: 1rem 1.2rem; */
 	margin-top: 1rem;
+	border-radius: 3px;
+}
+
+/* .wrapper .footer-bottom-right .download-card .text {
+	line-height: 13px;
+} */
+
+.wrapper .footer-bottom-right .download-card .app-store {
+	font-size: 14px;
+	font-weight: 600;
+}
+.wrapper .footer-bottom-right .download-card .get-now {
+	font-weight: 400;
+	font-size: 11px;
 }
 
 @media (max-width: 860px) {
-	.wrapper .bottom .right {
+	.wrapper .footer-bottom .footer-bottom-right {
 		order: 1;
 	}
 
-	.wrapper .bottom .center {
+	.wrapper .footer-bottom .footer-bottom-center {
 		order: 2;
 	}
 }
@@ -94,7 +109,7 @@
 		padding-right: 12rem;
 	}
 
-	.wrapper .bottom {
+	.wrapper .footer-bottom {
 		padding: 4.5rem;
 	}
 }
