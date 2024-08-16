@@ -121,7 +121,7 @@ class Footer extends Component {
 								</ul>
 							</div>
 						</div>
-						<span className="last-line">Shoppu 2024</span>
+						<span className="last-line">Shoppu &#169; 2024</span>
 					</div>
 					<div className="footer-bottom-right">
 						<p>DOWNLOAD APP</p>
