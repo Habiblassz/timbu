@@ -7,10 +7,12 @@
 :root {
 	--green-color: #69f0ae;
 	--gray-color: #37474f;
+	--faint-grey: #929fa5;
 	--light-gray: #a4a4a4;
 	--lighter-gray: #5f6c72;
 	--lightest-gray: ##5f6c72;
 	--black-color: #1d1d1d;
+	--dark-color: #191c1f;
 	--white-color: #ffffff;
 	--blue-color: #1b6392;
 	--light-blue: #1b6392;

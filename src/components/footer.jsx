@@ -6,13 +6,38 @@ class Footer extends Component {
 	state = {};
 	render() {
 		return (
-			<div className="wrapper">
+			<div className="footer-wrapper">
 				<div className="top footer-top">
 					<h3>Subscribe to our newsletter</h3>
 					<p>Get the latest updates on restock and new products</p>
 					<div className="subscribe">
-						<input type="text" placeholder="Email address" />
-						<button className="btn btn-primary">SUBSCRIBE</button>
+						<input type="text" placeholder="Email address" name="email" />
+						<span className="button">
+							<button className="btn btn-primary">
+								SUBSCRIBE
+								<svg
+									width="20"
+									height="20"
+									viewBox="0 0 22 22"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M3.75 12H20.25"
+										stroke="#fff"
+										strokeWidth="1.5"
+										strokeLinecap="round"
+										strokeLinejoin="round"
+									/>
+									<path
+										d="M13.5 5.25L20.25 12L13.5 18.75"
+										stroke="#fff"
+										strokeWidth="1.5"
+										strokeLinecap="round"
+										strokeLinejoin="round"
+									/>
+								</svg>
+							</button>
+						</span>
 					</div>
 				</div>
 				<div className="bottom footer-bottom">
@@ -49,10 +74,38 @@ class Footer extends Component {
 									<li>Bandages</li>
 									<li>Alcohol wipes</li>
 									<li>Sanitizers</li>
-									<li>Accesories</li>
+									<li>
+										<div className="accessories-line"></div>
+										<div className="accessories">Accesories</div>
+									</li>
 									<li>Surgical scissors</li>
 									<li>Gloves</li>
-									<li>Browse All Product</li>
+									<li>
+										<div className="browse-all">
+											Browse All Product
+											<svg
+												width="20"
+												height="20"
+												viewBox="0 0 22 22"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M3.75 12H20.25"
+													stroke="#69F0AE"
+													strokeWidth="1.5"
+													strokeLinecap="round"
+													strokeLinejoin="round"
+												/>
+												<path
+													d="M13.5 5.25L20.25 12L13.5 18.75"
+													stroke="#69F0AE"
+													strokeWidth="1.5"
+													strokeLinecap="round"
+													strokeLinejoin="round"
+												/>
+											</svg>
+										</div>
+									</li>
 								</ul>
 							</div>
 							<div className="quick-links">
@@ -68,7 +121,7 @@ class Footer extends Component {
 								</ul>
 							</div>
 						</div>
-						<span>Shoppu 2024</span>
+						<span className="last-line">Shoppu 2024</span>
 					</div>
 					<div className="footer-bottom-right">
 						<p>DOWNLOAD APP</p>

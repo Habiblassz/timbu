@@ -1,4 +1,4 @@
-.wrapper .footer-top {
+.footer-wrapper .footer-top {
 	background-color: var(--light-blue);
 	display: flex;
 	flex-direction: column;
@@ -8,21 +8,21 @@
 	color: #fff;
 }
 
-.wrapper .footer-top h3 {
+.footer-wrapper .footer-top h3 {
 	font-size: 1.5rem;
 	font-weight: 600;
 }
 
-.wrapper .footer-top p {
+.footer-wrapper .footer-top p {
 	font-size: 0.7rem;
 	font-weight: 400;
 }
 
-.wrapper .footer-top .subscribe {
+.footer-wrapper .footer-top .subscribe {
 	position: relative;
 	height: 50px;
 }
-.wrapper .footer-top .subscribe input {
+.footer-wrapper .footer-top .subscribe input {
 	width: 600px;
 	height: 100%;
 	border: none;
@@ -30,97 +30,143 @@
 	outline: none;
 }
 
-.wrapper .footer-top .subscribe button {
-	padding: 0.5rem 2rem;
+.footer-wrapper .footer-top .button {
+	display: flex;
 	position: absolute;
-	transform: translate(-165px, 10%);
+	right: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.footer-wrapper .footer-top .subscribe button {
+	padding: 0.5rem 2rem;
 	background-color: var(--deep-blue);
 	border-radius: 0;
 }
 
-.wrapper .footer-bottom {
+.footer-wrapper .footer-bottom {
 	background-color: var(--gray-color);
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 11rem;
 	flex-wrap: wrap;
-	/* gap: 2.5rem; */
 	color: #fff;
 	padding: 5rem 4.5rem;
 }
 
-.wrapper .footer-bottom .footer-bottom-left .logo-name {
+.footer-wrapper .footer-bottom .footer-bottom-left .logo-name {
 	font-weight: 700;
 	font-size: 2rem;
 }
 
-.wrapper .footer-bottom .footer-bottom-left .navbar-logo {
+.footer-wrapper .footer-bottom .footer-bottom-left .navbar-logo {
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
 	gap: 1.5rem;
 }
 
-.wrapper .footer-bottom .footer-bottom-center {
+.footer-wrapper .footer-bottom .footer-bottom-center {
 	display: flex;
 	flex-direction: column;
 }
 
-.wrapper .footer-bottom .footer-bottom-center .links {
-	display: flex;
-	gap: 1rem;
+.footer-wrapper .footer-bottom-center ul {
+	padding-left: 0;
+	position: relative;
+	line-height: 2rem;
 }
 
-.wrapper .footer-bottom .footer-bottom-right .download-card {
+.footer-wrapper .footer-bottom-center ul li {
+	color: var(--faint-grey);
+}
+
+.footer-wrapper .footer-bottom-center .accessories {
+	margin-left: 2.5rem;
+	color: #fff;
+}
+
+.footer-wrapper .footer-bottom-center .accessories-line {
+	width: 2rem;
+	height: 2px;
+	background-color: var(--green-color);
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+}
+
+.footer-wrapper .footer-bottom-center .browse-all {
+	background-color: var(--dark-color);
+	color: var(--green-color);
+}
+
+.footer-wrapper .footer-bottom-center .browse-all svg {
+	margin-left: 5px;
+}
+
+.footer-wrapper .footer-bottom .footer-bottom-center .links {
+	display: flex;
+	gap: 3rem;
+}
+
+.footer-wrapper .footer-bottom-center .last-line {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.footer-wrapper .footer-bottom .footer-bottom-right .download-card {
 	background-color: var(--dark-color);
 	display: flex;
-	/* align-items: center; */
-	justify-content: space-between;
-	/* padding: 1rem 1.2rem; */
+	gap: 1rem;
+	padding: 1rem 1.4rem;
 	margin-top: 1rem;
 	border-radius: 3px;
 }
 
-/* .wrapper .footer-bottom-right .download-card .text {
-	line-height: 13px;
-} */
+.footer-wrapper .footer-bottom-right .download-card .text {
+	line-height: 3px;
+	align-self: center;
+}
 
-.wrapper .footer-bottom-right .download-card .app-store {
+.footer-wrapper .footer-bottom-right .download-card .app-store {
 	font-size: 14px;
 	font-weight: 600;
 }
-.wrapper .footer-bottom-right .download-card .get-now {
+.footer-wrapper .footer-bottom-right .download-card .get-now {
 	font-weight: 400;
 	font-size: 11px;
 }
 
 @media (max-width: 860px) {
-	.wrapper .footer-bottom .footer-bottom-right {
+	.footer-wrapper .footer-bottom .footer-bottom-right {
 		order: 1;
 	}
 
-	.wrapper .footer-bottom .footer-bottom-center {
+	.footer-wrapper .footer-bottom .footer-bottom-center {
 		order: 2;
 	}
 }
 
 @media (max-width: 630px) {
-	.wrapper .subscribe input {
+	.footer-wrapper .subscribe input {
 		width: 400px;
 		padding-right: 12rem;
 	}
 
-	.wrapper .footer-bottom {
+	.footer-wrapper .footer-bottom {
 		padding: 4.5rem;
 	}
 }
 
 @media (max-width: 460px) {
-	.wrapper .subscribe input {
+	.footer-wrapper .subscribe input {
 		width: 280px;
 		padding-right: 7rem;
 	}
 
-	.wrapper .subscribe button {
+	.footer-wrapper .subscribe button {
 		padding: 0.45rem;
 		transform: translate(-100px, 10%);
 	}
