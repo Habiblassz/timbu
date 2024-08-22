@@ -11,6 +11,8 @@ import transparent from "../images/Image (8).png";
 import compression from "../images/Image (9).png";
 import "./shop.css";
 
+import { Link } from "react-router-dom";
+
 class Shop extends Component {
 	state = {
 		image: [
@@ -64,7 +66,7 @@ class Shop extends Component {
 				</div>
 				<div className="bandage-links">
 					<div className="browse-all">
-						<a href="#">
+						<Link to="/shop">
 							Browse All Products
 							<span className="arrow">
 								<svg
@@ -89,7 +91,7 @@ class Shop extends Component {
 									/>
 								</svg>
 							</span>
-						</a>
+						</Link>
 					</div>
 					<ul>
 						<li>

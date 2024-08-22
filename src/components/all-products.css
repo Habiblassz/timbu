@@ -1,0 +1,15 @@
+.all-products {
+	display: flex;
+	justify-content: space-between;
+	overflow-x: hidden;
+}
+
+.all-products .side-bar {
+	background-color: green;
+	flex-basis: 300px;
+}
+
+.shoppu-container {
+	background-color: red;
+	max-width: 70%;
+}

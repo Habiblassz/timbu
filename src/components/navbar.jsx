@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import frame2 from "../images/Frame 2.png";
 import "./navbar.css";
+import { Outlet } from "react-router-dom";
 
 class Navbar extends Component {
 	state = {};
@@ -114,6 +115,7 @@ class Navbar extends Component {
 						</span>
 					</div>
 				</div>
+				<Outlet />
 			</>
 		);
 	}

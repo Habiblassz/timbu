@@ -4,17 +4,44 @@ import Shop from "./components/shop";
 import Testimonials from "./components/testimonials";
 import Footer from "./components/footer";
 
-function App() {
+// React router dependencies
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from "./error-page";
+import { AllProducts } from "./components/all-products";
+
+const router = createBrowserRouter([
+	{
+		path: "/",
+		element: <Navbar />,
+		errorElement: <ErrorPage />,
+		children: [
+			{
+				path: "/",
+				element: <AllComponents />,
+			},
+			{
+				path: "/shop",
+				element: <AllProducts />,
+			},
+		],
+	},
+]);
+
+export default function App() {
 	return (
-		<div className="App">
-			<Navbar />
+		<>
+			<RouterProvider router={router} />
+		</>
+	);
+}
+
+function AllComponents() {
+	return (
+		<>
 			<Main />
 			<Shop />
 			<Testimonials />
 			<Footer />
-			{/* <DataFunction /> */}
-		</div>
+		</>
 	);
 }
-
-export default App;
