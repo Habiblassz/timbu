@@ -1,15 +1,17 @@
 .all-products {
 	display: flex;
-	justify-content: space-between;
-	overflow-x: hidden;
+	align-items: flex-start;
 }
 
 .all-products .side-bar {
-	background-color: green;
-	flex-basis: 300px;
+	/* background-color: green; */
+
+	display: flex;
+	flex-direction: column;
 }
 
 .shoppu-container {
-	background-color: red;
-	max-width: 70%;
+	padding-left: 300px;
+	/* background-color: red; */
+	max-width: 80%;
 }

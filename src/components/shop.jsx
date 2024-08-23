@@ -1,128 +1,35 @@
 import React, { Component } from "react";
-import bandage from "../images/Image.png";
-import alcohol from "../images/Image (1).png";
-import sterileCotton from "../images/Image (2).png";
-import sterile from "../images/Image (3).png";
-import medical from "../images/Image (4).png";
-import burns from "../images/Image (5).png";
-import adhesive from "../images/Image (6).png";
-import elastic from "../images/Image (7).png";
-import transparent from "../images/Image (8).png";
-import compression from "../images/Image (9).png";
 import "./shop.css";
 
 import { Link } from "react-router-dom";
+import { storeItems } from "./store";
 
-class Shop extends Component {
-	state = {
-		image: [
-			[bandage, "Bandages"],
-			[alcohol, "Alcohol wipes"],
-			[sterileCotton, "Sterile cotton buds"],
-			[sterile, "Sterile stripes"],
-			[medical, "Medical scissors"],
-			[burns, "Burns cream"],
-		],
-		bandageImages: [
-			[adhesive, "Adhesive", "#500"],
-			[elastic, "Elastic bandage", "#2000"],
-			[transparent, "Transparent bandage", "#3000"],
-			[compression, "Compresion Bandage", "#5000"],
-			[adhesive, "Adhesive", "#500"],
-			[elastic, "Elastic bandage", "#2000"],
-			[transparent, "Transparent bandage", "#3000"],
-			[compression, "Compresion Bandage", "#5000"],
-			[adhesive, "Adhesive", "#500"],
-			[elastic, "Elastic bandage", "#2000"],
-			[transparent, "Transparent bandage", "#3000"],
-			[compression, "Compresion Bandage", "#5000"],
-			[adhesive, "Adhesive", "#500"],
-			[elastic, "Elastic bandage", "#2000"],
-			[transparent, "Transparent bandage", "#3000"],
-			[compression, "Compresion Bandage", "#5000"],
-		],
-	};
-	render() {
-		// const url =
-		// 	"https://api.timbu.cloud/products?APP_ID=SZ4TF873UKWDWLI&API_KEY=71ca24ca05fb40488f0fb83750de43df20240713102951441458";
+function Shop() {
+	// const url =
+	// 	"https://api.timbu.cloud/products?APP_ID=SZ4TF873UKWDWLI&API_KEY=71ca24ca05fb40488f0fb83750de43df20240713102951441458";
 
-		// const request = () => fetch(url);
-		// let FetchImages = async () => {
-		// 	let data = await request();
-		// 	let response = await data.json();
-		// 	console.log(response);
-		// };
-		// FetchImages();
+	// const request = () => fetch(url);
+	// let FetchImages = async () => {
+	// 	let data = await request();
+	// 	let response = await data.json();
+	// 	console.log(response);
+	// };
+	// FetchImages();
 
-		return (
-			<div className="gallery">
-				<div className="heading-text">
-					<span>Shop with Categories</span>
-				</div>
-				<div className="shopping-item-array">
-					{this.state.image.map((item, index) => (
-						<Item key={index} image={item[0]} span={item[1]} />
-					))}
-				</div>
-				<div className="bandage-links">
-					<div className="browse-all">
-						<Link to="/shop">
-							Browse All Products
-							<span className="arrow">
-								<svg
-									width="20"
-									height="20"
-									viewBox="0 0 22 22"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M3.75 12H20.25"
-										stroke="#1b6392"
-										strokeWidth="1.5"
-										strokeLinecap="round"
-										strokeLinejoin="round"
-									/>
-									<path
-										d="M13.5 5.25L20.25 12L13.5 18.75"
-										stroke="#1b6392"
-										strokeWidth="1.5"
-										strokeLinecap="round"
-										strokeLinejoin="round"
-									/>
-								</svg>
-							</span>
-						</Link>
-					</div>
-					<ul>
-						<li>
-							<a href="#">All Products</a>
-						</li>
-						<li>
-							<a href="#">Adesive Bandages</a>
-						</li>
-						<li>
-							<a href="#">Gauze Bandages</a>
-						</li>
-						<li>
-							<a href="#">Elastic Bandages</a>
-						</li>
-					</ul>
-				</div>
-				<div className="bandages">
-					<div className="bandage-items">
-						{this.state.bandageImages.map((item, index) => (
-							<Bandage
-								key={index}
-								img={item[0]}
-								paragraph={item[1]}
-								number={item[2]}
-							/>
-						))}
-					</div>
-				</div>
-				<div className="view-all">
-					<a href="#">
-						View All
+	return (
+		<div className="gallery">
+			<div className="heading-text">
+				<span>Shop with Categories</span>
+			</div>
+			<div className="shopping-item-array">
+				{storeItems.image.map((item, index) => (
+					<Item key={index} image={item[0]} span={item[1]} />
+				))}
+			</div>
+			<div className="bandage-links">
+				<div className="browse-all">
+					<Link to="/shop">
+						Browse All Products
 						<span className="arrow">
 							<svg
 								width="20"
@@ -146,11 +53,65 @@ class Shop extends Component {
 								/>
 							</svg>
 						</span>
-					</a>
+					</Link>
+				</div>
+				<ul>
+					<li>
+						<Link to="#">All Products</Link>
+					</li>
+					<li>
+						<Link to="#">Adesive Bandages</Link>
+					</li>
+					<li>
+						<Link to="#">Gauze Bandages</Link>
+					</li>
+					<li>
+						<Link to="#">Elastic Bandages</Link>
+					</li>
+				</ul>
+			</div>
+			<div className="bandages">
+				<div className="bandage-items">
+					{storeItems.bandageImages.map((item, index) => (
+						<Bandage
+							key={index}
+							img={item[0]}
+							paragraph={item[1]}
+							number={item[2]}
+						/>
+					))}
 				</div>
 			</div>
-		);
-	}
+			<div className="view-all">
+				<Link to="/shop">
+					View All
+					<span className="arrow">
+						<svg
+							width="20"
+							height="20"
+							viewBox="0 0 22 22"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M3.75 12H20.25"
+								stroke="#1b6392"
+								strokeWidth="1.5"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+							/>
+							<path
+								d="M13.5 5.25L20.25 12L13.5 18.75"
+								stroke="#1b6392"
+								strokeWidth="1.5"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+							/>
+						</svg>
+					</span>
+				</Link>
+			</div>
+		</div>
+	);
 }
 
 function Item(props) {
