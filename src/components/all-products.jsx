@@ -1,5 +1,6 @@
 import "./all-products.css";
 import Shop from "./shop";
+import { storeItems } from "./store";
 
 function AllProducts() {
 	return (
@@ -13,12 +14,9 @@ function AllProducts() {
 						</div>
 						<div className="cartegories">
 							<ul>
-								<li>Bandages</li>
-								<li>Alcohol wipes</li>
-								<li>Sterile cotton</li>
-								<li>Sterile stripes</li>
-								<li>Medical scissors</li>
-								<li>Burns cream</li>
+								{storeItems.image.map((item, index) => {
+									return <li key={item[1]}> {item[1]}</li>;
+								})}
 							</ul>
 						</div>
 					</div>

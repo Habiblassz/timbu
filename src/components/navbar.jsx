@@ -1,6 +1,7 @@
 import frame2 from "../images/Frame 2.png";
 import "./navbar.css";
 import { Outlet } from "react-router-dom";
+import { storeItems } from "./store";
 
 function Navbar() {
 	return (
@@ -35,11 +36,9 @@ function Navbar() {
 
 					<input type="search" placeholder="Search" list="shopping-options" />
 					<datalist id="shopping-options">
-						<option value="Alcohol wipes"></option>
-						<option value="Sterile cotton"></option>
-						<option value="Sterile wipe"></option>
-						<option value="Medical scissors"></option>
-						<option value="Burn cream"></option>
+						{storeItems.image.map((product) => {
+							return <option value={product[1]} key={product[1]}></option>;
+						})}
 					</datalist>
 				</div>
 				<div className="navbar-icons">
